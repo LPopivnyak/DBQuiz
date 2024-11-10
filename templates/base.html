@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<h1> Підвал негрів</h1>
+<nav>
+    <a href="/"> Головна сторінка</a>
+    <a href="/rickroll"> Не заходьте</a>
+</nav>
+
+{% block content%} {% endblock %}
+
+<h1> Футер</h1>
+</body>
+</html>

@@ -31,4 +31,5 @@ class DBManager:
             Is_correct BOOLEAN
         );
         """)
+
         self.connection.commit()
