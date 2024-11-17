@@ -33,3 +33,30 @@ class DBManager:
         """)
 
         self.connection.commit()
+
+
+
+    def add_quiz(self, id, title, description):
+        cursor = self.connection.cursor()
+        cursor.execute("INSERT INTO Quizzies(id, title, description) VALUES (?, ?, ?)", [id, title, description])
+        self.connection.commit()
+        cursor.close()
+
+    def add_question(self, id, Quiz_id, content):
+        cursor = self.connection.cursor()
+        cursor.execute("INSERT INTO Questions(id, Quiz_id, content) VALUES (?, ?, ?)", [id, Quiz_id, content])
+        self.connection.commit()
+        cursor.close()
+    def receive_quizzies(self):
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Quizzies")
+        res = cursor.fetchall()
+        cursor.close()
+        return res
+
+    def receive_questions(self, quiz_id):
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * FROM Questions WHERE quiz_id = ?", [quiz_id])
+        res = cursor.fetchall()
+        cursor.close()
+        return res
