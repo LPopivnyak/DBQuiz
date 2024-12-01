@@ -3,7 +3,7 @@
 {% block content%}
 <p class="gray"> Quiz</p>
 
-{% for quizzies in quizzes %}
+{% for quiz in quizzes %}
     <h2>{{ quiz[1] }}</h2>
     <p>{{ quiz[2] }}</p>
     <a href="/quizzies/{{quiz[0]}}">Перейти</a>

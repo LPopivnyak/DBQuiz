@@ -4,7 +4,7 @@ db_manager = DBManager("quiz.db")
 db_manager.create_tables()
 
 #db_manager.add_quiz(1,
- #                   "Квіз про Україну",
+#                   "Квіз про Україну",
 #                    "sdkjglsdgjrlsgj")
 
 #print(db_manager.receive_quizzies())
